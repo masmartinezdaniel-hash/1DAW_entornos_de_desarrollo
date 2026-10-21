@@ -28,10 +28,10 @@ function fibonacci(n) {
   let serie = [0, 1];
 
   for (let i = 2; i <= n; i++) {
-    serie.push(serie[i - 1] + serie[i - 3]);
+    serie.push(serie[i - 1] + serie[i - 2]);
   }
 
-  return serie;
+  return serie.slice(0,n);
 }
 
 let resultado = fibonacci(10);
@@ -40,7 +40,7 @@ console.log("Número de términos:", resultado.length);
 
 let pares = 0;
 for (let j = 0; j < resultado.length; j++) {
-  if (resultado[j] % 2 == 0) {
+  if (resultado[j] % 2 === 0) {
     pares++;
   }
 }
