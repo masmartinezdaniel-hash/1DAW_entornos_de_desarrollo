@@ -29,14 +29,15 @@ function crearInforme(nombre, notas) {
     suma = suma + notas[i];
   }
 
-  const media = suma / notas.lenght;
+  const media = suma / notas.length;
 
   let resultado = "SUSPENSO";
+
   if (media >= 5) {
-    resultdo = "APROBADO";
+    resultado = "APROBADO";
   }
 
-  media = media.toFixed(2);
+  const mediaformateada = media.toFixed(2);
 
   return nombre + " tiene una media de " + media + " y su resultado es " + resultado;
 }
@@ -44,8 +45,8 @@ function crearInforme(nombre, notas) {
 let notasAna = [8, 7, 6, 9];
 let notasLuis = [3, 5, 4, 5];
 
-console.log(crearInforme(notasAna, "Ana"));
-console.log(crearInforme(notasLuis, "Luis"));
+console.log(crearInforme("Ana", notasAna ));
+console.log(crearInforme("Luis", notasLuis));
 </script>
 </body>
 </html>
